@@ -23,7 +23,7 @@ const MainPage = () => {
                 <span style={{position:"absolute",bottom:"10px"}}>Servicios</span>
             </SubTitleContainer>
             <Services selected={location.pathname.split("/")[1]}/>
-            {location.pathname.split("/")[1]==="movements" ? <Movements/> : null}
+            {location.pathname.split("/")[1]==="movements" || location.pathname.split("/")[1] === "" ? <Movements/> : null}
             {location.pathname.split("/")[1]==="analysis" ? <Analysis/> : null}
             {location.pathname.split("/")[1]==="groups" ? <Group/> : null}
             {location.pathname.split("/")[1]==="creategroup" ? <CreateGroup/> : null}
