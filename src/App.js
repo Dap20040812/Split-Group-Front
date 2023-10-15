@@ -1,3 +1,5 @@
+import MainPage from "./pages/MainPage";
+
 import React, {useEffect} from 'react';
 import getUser from './query/loginClaro';
 import {useDispatch} from "react-redux"
@@ -23,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-
+      <MainPage/>
     </div>
   );
 }
