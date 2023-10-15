@@ -1,5 +1,5 @@
 import axios from "axios";
-import { async } from "q";
+
 export const getBalance = async (id) => {
     let config = {
         method: 'get',
