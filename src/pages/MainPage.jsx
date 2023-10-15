@@ -5,6 +5,7 @@ import Services from '../components/features/Services';
 import Navbar from '../components/features/Navbar';
 import { useLocation } from 'react-router';
 import Movements from '../components/features/Movements';
+import Group from '../components/features/Group';
 
 
 const MainPage = () => { 
@@ -20,7 +21,8 @@ const MainPage = () => {
                 <span style={{position:"absolute",bottom:"10px"}}>Servicios</span>
             </SubTitleContainer>
             <Services selected={location.pathname.split("/")[1]}/>
-            <Movements/>
+            {location.pathname.split("/")[1]==="movements" ? <Movements/> : null}
+            {location.pathname.split("/")[1]==="groups" ? <Group/> : null}
             
         </Container>
     )

@@ -21,7 +21,7 @@ justify-content: center;
 `;
 
 export const HeaderContainer = styled.div`
-height:84.5px;
+height: 2em;
 width: 100%;
 display: flex;
 `;
@@ -85,10 +85,15 @@ export const MovementContainer = styled.div`
 height:auto;
 width: 100%;
 `
+export const CreateGroupContainer = styled.div`
+height:auto;
+width: 100%;
+`
 export const DateMovementContainer = styled.div`
 display: flex;
 width: 100%;
 `
+
 export const ItemContainer = styled.div`
 display: flex;
 flex-direction: row;
@@ -96,4 +101,8 @@ width: 100%;
 height: 60px;
 background-color: ${props => props.color};
 border-radius: 10px;
+`
+export const GroupContainer = styled.div`
+height:auto;
+width: 100%;
 `

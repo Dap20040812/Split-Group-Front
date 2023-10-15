@@ -22,7 +22,7 @@ const Balance = () => {
     },[]);
     return(
         <BalanceContainer>
-            {balance&&
+            {balance &&
             <>
                 <BalanceText>$ {parseFloat(balance).toLocaleString("en-US")}</BalanceText>
                 <CurrencyText>COP</CurrencyText>
