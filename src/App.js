@@ -1,10 +1,10 @@
 import MainPage from "./pages/MainPage";
-
 import React, {useEffect, useState} from 'react';
 import getUser from './query/loginClaro';
 import {useDispatch, useSelector} from "react-redux"
 import {selecUserUid, setUserLogin} from './features/user/UserSlice'
-
+import { BrowserRouter as Router, Route} from "react-router-dom";
+import { Routes } from "react-router-dom/dist"
 function App() {
 
   const dispatch = useDispatch()
@@ -30,7 +30,11 @@ function App() {
 
   return (
     <div className="App">
-      <MainPage/>
+      <Router>
+        <Routes>
+          <Route path="/*" element={<MainPage/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }
