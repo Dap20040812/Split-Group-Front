@@ -2,7 +2,7 @@ import React from 'react';
 import { NavbarContainer, NavbarItem } from '../common/Container';
 
 const Navbar = (props) => {
-  const { nav, setNav } = props;
+  const { setNav } = props;
   return (
     <NavbarContainer>
       <NavbarItem onClick={()=>setNav("ingress")}>Ingresos</NavbarItem>

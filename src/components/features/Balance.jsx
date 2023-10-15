@@ -2,8 +2,6 @@ import React, { useEffect, useState} from "react";
 import { BalanceContainer } from "../common/Container";
 import { BalanceText, CurrencyText } from "../common/Text";
 import { getBalance } from "../../services/TransactionServices";
-import { useSelector } from "react-redux";
-import { selecUserUid } from "../../features/user/UserSlice";
 import getUser from "../../query/loginClaro";
 
 const Balance = () => {

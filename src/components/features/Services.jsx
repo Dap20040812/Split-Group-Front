@@ -3,7 +3,7 @@ import { ServicesContainer } from '../common/Container';
 import ServiceBubble from './ServiceBubble';
 
 const Services = (props) => {
-    const {selected, setPageState} = props;
+    const {selected} = props;
     return(
         <ServicesContainer>
 
