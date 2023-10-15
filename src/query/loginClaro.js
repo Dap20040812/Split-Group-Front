@@ -14,7 +14,7 @@ const getUser = async () => {
         const urlget = `${urlApi}/api/user`;
         axios.get(urlget).then((response) => {
             var c = 0
-            response.data.map((item) => {
+            response.data.map(() => {
                 c = c + 1;
             })
             const urlcreate = `${urlApi}/api/createuser`;
