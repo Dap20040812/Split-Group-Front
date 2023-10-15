@@ -4,7 +4,6 @@ import { GroupContainer } from '../common/Container'
 import { addUserGroups, getGroups, getUserGroups } from '../../services/GroupServie'
 import getUser from "../../query/loginClaro";
 import {Link } from 'react-router-dom';
-import { async } from 'q';
 import { createDebt, getGroupDeb } from '../../services/DebtService';
 
 function Group() {
