@@ -1,8 +1,8 @@
 import MainPage from "./pages/MainPage";
-import React, {useEffect, useState} from 'react';
+import React, {useEffect } from 'react';
 import getUser from './query/loginClaro';
-import {useDispatch, useSelector} from "react-redux"
-import {selecUserUid, setUserLogin} from './features/user/UserSlice'
+import {useDispatch } from "react-redux"
+import { setUserLogin} from './features/user/UserSlice'
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import { Routes } from "react-router-dom/dist"
 function App() {
@@ -23,7 +23,7 @@ function App() {
       }
     }
         fetchUser();
-  }, []);
+  }, [dispatch]);
 
 
 

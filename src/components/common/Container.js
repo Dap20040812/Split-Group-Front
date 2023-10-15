@@ -78,6 +78,7 @@ export const NavbarContainer = styled.div`
 
 export const NavbarItem = styled.div`
   margin-right: 10px;
+  text-decoration: ${props => props.selected?'underline':'none'};
   cursor: pointer;
 `;
 

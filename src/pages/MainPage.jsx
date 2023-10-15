@@ -1,12 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { Container, HeaderContainer, SubTitleContainer } from '../components/common/Container';
 import Balance from '../components/features/Balance';
 import Services from '../components/features/Services';
-import Navbar from '../components/features/Navbar';
 import { useLocation } from 'react-router';
 import Movements from '../components/features/Movements';
 import Group from '../components/features/Group';
 import CreateGroup from '../components/features/CreateGroup';
+import Analysis from '../components/features/Analysis';
+import Categories from '../components/features/Categories';
 
 
 const MainPage = () => { 
@@ -23,8 +24,10 @@ const MainPage = () => {
             </SubTitleContainer>
             <Services selected={location.pathname.split("/")[1]}/>
             {location.pathname.split("/")[1]==="movements" ? <Movements/> : null}
+            {location.pathname.split("/")[1]==="analysis" ? <Analysis/> : null}
             {location.pathname.split("/")[1]==="groups" ? <Group/> : null}
             {location.pathname.split("/")[1]==="creategroup" ? <CreateGroup/> : null}
+            {location.pathname.split("/")[1]==="categories" ? <Categories/> : null}
             
         </Container>
     )

@@ -14,14 +14,14 @@ const getUser = async () => {
         const urlget = `${urlApi}/api/user`;
         axios.get(urlget).then((response) => {
             var c = 0
-            response.data.map((item) => {
+            response.data.forEach(() => {
                 c = c + 1;
             })
             const urlcreate = `${urlApi}/api/createuser`;
             var requestData = {
                 "id": c + 1,
                 "name": "Usuario",
-                }
+            }
             axios.post(urlcreate, requestData).then((response) => {
                 var urlgetId = `${urlApi}/api/user/${c + 1}`;
                 axios.get(urlgetId).then((response) => {
