@@ -35,3 +35,47 @@ align-items: flex-start;
 color: #FFFFBA;
 position: relative;
 `;
+
+export const ServicesContainer = styled.div`
+display: flex;
+width: 100%;
+height: 85px;
+flex-direction: row;
+gap: 20px;
+`;
+
+export const ServiceBubbleContainer = styled.div`
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+flex-direction: column;
+color: white;
+font-size: 0.75rem;
+`;
+
+
+export const ServiceIconContainer = styled.div`
+background-color: #FFFFBA;
+border-radius: 999px;
+height: 70px;
+width: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+`
+export const NavbarContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 49px;
+  width: 100%;
+  gap: 34px;
+  color: #FFFFBA;
+`;
+
+export const NavbarItem = styled.div`
+  margin-right: 10px;
+  cursor: pointer;
+`;
