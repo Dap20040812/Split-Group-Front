@@ -13,10 +13,9 @@ function App() {
     const setUser = async () => {
       var response = await getUser();
       dispatch(setUserLogin({
-        name: response.name,
-        uid: response.id,       
+        name: response[0].name,
+        uid: response[0].id,       
       }))
-      console.log(response);
     }
 
     setUser();
