@@ -4,7 +4,6 @@ import { getCategories } from '../../services/CategoryService';
 import Item from './Item';
 import { styled } from 'styled-components';
 
-
 const Categories = () => {
 
     const [categories, setCategories] = useState([]);
@@ -62,29 +61,6 @@ const CreateButton = styled.div`
     font-weight: bold;
     color: #FFFFFF;
     background-color: #253030;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    &:hover{
-        cursor: pointer;
-        background-color: #698383;
-    }
-`
-
-const Groups = styled.div`
-    display: flex;
-    felx-direction: column;
-    gap: 2em;
-`
-
-const GroupCard = styled.div`
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #253030;
-    border: 2px solid white;
-    color: #ffffff;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
