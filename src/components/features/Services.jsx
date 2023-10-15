@@ -1,7 +1,6 @@
 import React from 'react';
 import { ServicesContainer } from '../common/Container';
 import ServiceBubble from './ServiceBubble';
-import { Link } from 'react-router-dom';
 
 const Services = (props) => {
     const {selected, setPageState} = props;

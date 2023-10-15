@@ -4,9 +4,10 @@ export const Container = styled.div`
 display: flex;
 flex-direction: column;
 width: 100vw;
-height: 100vh;
+height: auto;
 padding: 26px 10px 20px 10px;
 box-sizing: border-box;
+overflow-y: scroll;
 `;
 export const BalanceContainer = styled.div`
 background-color: #CEE166;
@@ -79,3 +80,20 @@ export const NavbarItem = styled.div`
   margin-right: 10px;
   cursor: pointer;
 `;
+
+export const MovementContainer = styled.div`
+height:auto;
+width: 100%;
+`
+export const DateMovementContainer = styled.div`
+display: flex;
+width: 100%;
+`
+export const ItemContainer = styled.div`
+display: flex;
+flex-direction: row;
+width: 100%;
+height: 60px;
+background-color: ${props => props.color};
+border-radius: 10px;
+`
