@@ -4,7 +4,7 @@ export const getBalance = async (id) => {
     let config = {
         method: 'get',
         maxBodyLength: Infinity,
-        url: 'http://35.185.209.25:8080/api/balance/'+id,
+        url: 'https://07pn30fas5.execute-api.us-east-1.amazonaws.com/prod/api/balance/'+id,
         headers: { }
     };
 
@@ -15,7 +15,7 @@ export const getUserEgress = async (id) => {
     let config = {
         method: 'get',
         maxBodyLength: Infinity,
-        url: 'http://35.185.209.25:8080/api/egressTransactions/'+id,
+        url: 'https://07pn30fas5.execute-api.us-east-1.amazonaws.com/prod/api/egressTransactions/'+id,
         headers: { }
     };
 
@@ -26,7 +26,7 @@ export const getUserIngress = async (id) => {
     let config = {
         method: 'get',
         maxBodyLength: Infinity,
-        url: 'http://35.185.209.25:8080/api/ingressTransactions/'+id,
+        url: 'https://07pn30fas5.execute-api.us-east-1.amazonaws.com/prod/api/ingressTransactions/'+id,
         headers: { }
     };
 
