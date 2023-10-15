@@ -9,10 +9,9 @@ const Balance = () => {
     const [balance, setBalance] = useState(null);
     const user = useSelector(selecUserUid);
     useEffect(() => {
-        getBalance(user).then((response)=>{
+        getBalance(3).then((response)=>{
             setBalance(response.data[0].balance.split(".")[0])
         })
-        console.log(user);
     },[]);
     return(
         <BalanceContainer>
