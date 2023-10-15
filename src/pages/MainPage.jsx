@@ -6,6 +6,7 @@ import Navbar from '../components/features/Navbar';
 import { useLocation } from 'react-router';
 import Movements from '../components/features/Movements';
 import Group from '../components/features/Group';
+import CreateGroup from '../components/features/CreateGroup';
 
 
 const MainPage = () => { 
@@ -23,6 +24,7 @@ const MainPage = () => {
             <Services selected={location.pathname.split("/")[1]}/>
             {location.pathname.split("/")[1]==="movements" ? <Movements/> : null}
             {location.pathname.split("/")[1]==="groups" ? <Group/> : null}
+            {location.pathname.split("/")[1]==="creategroup" ? <CreateGroup/> : null}
             
         </Container>
     )
