@@ -21,7 +21,7 @@ justify-content: center;
 `;
 
 export const HeaderContainer = styled.div`
-height: 2em;
+height: 0.5em;
 width: 100%;
 display: flex;
 `;
