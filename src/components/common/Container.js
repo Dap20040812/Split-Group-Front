@@ -82,12 +82,17 @@ export const NavbarItem = styled.div`
 `;
 
 export const MovementContainer = styled.div`
+display: flex;
+flex-direction: column;
 height:auto;
 width: 100%;
+gap: 4px;
 `
+
 export const CreateGroupContainer = styled.div`
 height:auto;
 width: 100%;
+gap: 4px;
 `
 export const DateMovementContainer = styled.div`
 display: flex;
@@ -101,8 +106,29 @@ width: 100%;
 height: 60px;
 background-color: ${props => props.color};
 border-radius: 10px;
+display: flex;
+align-items: center;
+padding: 20px 20px;
+box-sizing: border-box;
 `
 export const GroupContainer = styled.div`
 height:auto;
 width: 100%;
+`
+export const IconContainer = styled.div`
+width:40px;
+height:40px;
+background-color:#FFFFC4;
+border-radius:999px;
+color:#465858;
+display:flex;
+justify-content: center;
+align-items:center;
+`
+export const TextContainer = styled.div`
+display: flex;
+flex-direction: column;
+margin-left: 10px;
+color: #465858;
+
 `

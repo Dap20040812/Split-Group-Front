@@ -9,6 +9,8 @@ const Movements = () => {
     const [ingress, setIngress] = useState([]);
     const [egress, setEgress] = useState([]);
     const [total, setTotal] = useState([]);
+    const [formatedTotal, setFormatedTotal] = useState([]);
+    const [groupedData, setGroupedData] = useState(null);
     useEffect(() => {
         getUserIngress(3).then((response)=>{
             setIngress(response.data)
@@ -21,9 +23,8 @@ const Movements = () => {
         setTotal(ingress.concat(egress))
     },[ingress, egress])
     useEffect(()=>{
-        console.log("total",total)
-        console.log(groupDataByDate(total))
-
+        setFormatedTotal(Object.keys(groupDataByDate(total)))
+        setGroupedData(groupDataByDate(total))
     },[total])
 
     const groupDataByDate = (data) => {
@@ -41,17 +42,28 @@ const Movements = () => {
     return(
         <MovementContainer>
             <Navbar setNav={setNavState} nav={navState}/>
-            <ItemContainer color="#465858">
 
-            </ItemContainer>
             {
-                total&&total.map((item, index)=>{
+                formatedTotal&&formatedTotal.map((date)=>{
                     return(
-                        <Item key={index} color="#C5F1C6"/>
+                        <>
+                            <ItemContainer color="#465858" style={{padding:"0", color:"#FFFFBA", fontSize:"0.9rem"}}>
+                                {new Date(date).getDate() + " de " + new Date(date).toLocaleString('default', { month: 'long' }) + " de " + new Date(date).getFullYear()}
+                            </ItemContainer>
+                            <>
+                            {
+                                groupedData[date].filter((item) => navState === "both" || item.type === navState).map((item)=>(
+                                    <Item color="#C5F1C6" title={item.title} hour={item.creation_date.split(":")[0].split("T")[1]+":"+item.creation_date.split(":")[1]} amount={"$ "+item.amount} type={item.type}/>
+                                ))
+                            }
+                            
+                            </>
+                        </>
+                        
+
                     )
                 })
             }
-            <Item color="#C5F1C6"/>
         </MovementContainer>
     )
 }
