@@ -1,27 +1,31 @@
 import MainPage from "./pages/MainPage";
-
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import getUser from './query/loginClaro';
-import {useDispatch} from "react-redux"
-import {setUserLogin} from './features/user/UserSlice'
+import {useDispatch, useSelector} from "react-redux"
+import {selecUserUid, setUserLogin} from './features/user/UserSlice'
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import { Routes } from "react-router-dom/dist"
 function App() {
 
   const dispatch = useDispatch()
 
-
   useEffect(() => {
-    const setUser = async () => {
-      var response = await getUser();
-      dispatch(setUserLogin({
-        name: response[0].name,
-        uid: response[0].id,       
-      }))
+    async function fetchUser() {
+      try {
+        const response = await getUser();
+        const user = response[0];
+        dispatch(setUserLogin({
+          name: user.name,
+          uid: user.id,
+        }));
+      } catch (error) {
+        console.error('Error fetching user:', error);
+      }
     }
-
-    setUser();
+        fetchUser();
   }, []);
+
+
 
 
   return (
